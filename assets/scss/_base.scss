@@ -1,0 +1,131 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+body {
+    font-family: sans-serif;
+    color: $text-color;
+    background: $bg;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+    justify-content: center;
+
+}
+
+section {
+    width: $section-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $card-bg;
+    // margin: 1;
+    padding: 2rem 1rem;
+    max-width: $max-width;
+
+    margin: 1rem auto;
+    justify-content: center;
+    border-radius: 15px;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+}
+
+// TABLET: ≤ 1024px
+@media (max-width: 1024px) {
+    section {
+      width: $wide-L;
+    //   padding: 0 0.5rem;
+  
+      h2 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  
+  // MOBILE: ≤ 768px
+  @media (max-width: 768px) {
+    section {
+      width: $wide-M;
+
+  
+      h2 {
+        font-size: 1.6rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+  
+  // SMALL DEVICES: ≤ 480px
+  @media (max-width: 480px) {
+    section {
+      width: $wide-S;
+
+      padding: 1.5rem 0.5rem;
+  
+      h2 {
+        font-size: 1.4rem;
+      }
+  
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+// @media (max-width: 768px) {
+//     section {
+//         width: 90vw;
+//     }
+// }
+
+// Mixin reutilizable
+@mixin fade-in-animation {
+    opacity: 0;
+    transform: translateY($fade-distance);
+    transition: opacity $fade-duration $fade-easing, transform $fade-duration $fade-easing;
+  
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Aplicación
+  .fade-in {
+    @include fade-in-animation;
+  }

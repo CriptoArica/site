@@ -1,0 +1,69 @@
+.site-footer {
+  background-color: $bg;
+  color: $text-color;
+  padding: 1.5rem 1rem 0.2rem 1rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+
+      li {
+        a {
+          color: #eee;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s;
+
+          i {
+            margin-right: 0.5rem;
+            color: $accent;
+          }
+
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  .credito {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 1rem;
+  }
+}
+
+// TABLET: ≤ 1024px
+@media (max-width: 1024px) {
+.site-footer {
+  width: $wide-L;
+}
+}
+
+// MOBILE: ≤ 768px
+@media (max-width: 768px) {
+.site-footer {
+  width: $wide-M;
+
+}
+}
+
+// SMALL DEVICES: ≤ 480px
+@media (max-width: 480px) {
+.site-footer {
+  width: $wide-S;
+
+}
+}

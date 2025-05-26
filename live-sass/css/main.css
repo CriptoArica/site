@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+header {
+  background: #0066ff;
+  color: white;
+  padding: 1rem;
+}
+header nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=main.css.map */
